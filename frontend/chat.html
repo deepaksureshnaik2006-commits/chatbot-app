@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex h-screen bg-gray-100">
+
+<!-- Sidebar -->
+<div class="w-1/4 bg-white border-r p-4 flex flex-col">
+  <h2 class="text-lg font-bold mb-4">Chats</h2>
+
+  <button onclick="newChat()" class="bg-green-500 text-white p-2 rounded mb-4">+ New Chat</button>
+
+  <div id="chatList" class="flex-1 overflow-y-auto mb-4"></div>
+
+  <div class="border-t pt-4">
+    <h3 id="chatTitle" class="text-md font-semibold mb-2">Chat: New Chat</h3>
+    <input id="renameInput" placeholder="New name" class="w-full p-2 mb-2 border rounded">
+    <button onclick="renameChat()" class="bg-blue-500 text-white p-2 rounded w-full mb-2">Rename</button>
+    <button onclick="deleteChat()" class="bg-red-500 text-white p-2 rounded w-full mb-2">Delete Chat</button>
+    <button onclick="logout()" class="bg-gray-500 text-white p-2 rounded w-full">Logout</button>
+  </div>
+</div>
+
+<!-- Main Chat Area -->
+<div class="flex-1 flex flex-col">
+  <div class="bg-blue-500 text-white p-4 text-center text-lg font-bold">
+    MindCare AI Chat
+  </div>
+
+  <div id="chatBox" class="flex-1 p-4 overflow-y-auto"></div>
+
+  <div class="p-4 flex gap-2 bg-white">
+    <input id="msg" class="flex-1 border p-2 rounded" placeholder="Type message...">
+    <button onclick="send()" class="bg-blue-500 text-white px-4 rounded">Send</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

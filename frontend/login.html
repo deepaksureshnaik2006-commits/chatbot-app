@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+<div class="bg-white w-[400px] p-6 rounded-xl shadow">
+
+  <h1 class="text-2xl font-bold text-center mb-4">🌱 MindCare AI</h1>
+
+  <!-- Tabs -->
+  <div class="flex justify-around border-b mb-4">
+    <button onclick="showTab('login')" class="tab-btn text-blue-500 border-b-2 border-blue-500">🔐 Login</button>
+    <button onclick="showTab('signup')" class="tab-btn">📝 Sign Up</button>
+    <button onclick="showTab('delete')" class="tab-btn">🗑️ Delete</button>
+  </div>
+
+  <!-- LOGIN -->
+  <div id="loginTab">
+    <input id="email" placeholder="Email" class="w-full p-2 mb-3 border rounded">
+    <input id="password" type="password" placeholder="Password" class="w-full p-2 mb-3 border rounded">
+
+    <button onclick="login()" class="w-full bg-blue-500 text-white p-2 rounded">Login</button>
+    <button onclick="guest()" class="w-full bg-gray-500 text-white p-2 rounded mt-2">Guest</button>
+  </div>
+
+  <!-- SIGNUP -->
+  <div id="signupTab" class="hidden">
+    <input id="s_email" placeholder="New Email" class="w-full p-2 mb-3 border rounded">
+    <input id="s_pass" type="password" placeholder="New Password" class="w-full p-2 mb-3 border rounded">
+
+    <button onclick="signup()" class="w-full bg-green-500 text-white p-2 rounded">Create</button>
+  </div>
+
+  <!-- DELETE -->
+  <div id="deleteTab" class="hidden">
+    <input id="d_email" placeholder="Email" class="w-full p-2 mb-3 border rounded">
+    <input id="d_pass" type="password" placeholder="Password" class="w-full p-2 mb-3 border rounded">
+
+    <button onclick="deleteAcc()" class="w-full bg-red-500 text-white p-2 rounded">Delete</button>
+  </div>
+
+  <p id="msg" class="text-center mt-3 text-red-500"></p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
